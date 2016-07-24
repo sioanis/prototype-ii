@@ -1,0 +1,71 @@
+$icon-font-path: '../fonts/';
+$img-path: '../images/';
+
+@function img($asset) { 
+  @return url("#{$img-path}#{$asset}");
+}
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(https://fonts.googleapis.com/css?family=Yellowtail);
+@import 'vars';
+
+html {
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  // background: $red-opacity;
+  color: $white;
+  text-align: center;
+  h1 {
+    font-family: 'Yellowtail', cursive;
+  }
+}
+
+.login {
+  background: img('home.jpg') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: $white;
+  a {
+    color: $white;
+    font-weight: bold;
+  }
+  .opacity {
+    background: rgba(0,0,0,.1);
+    height: 100vh;
+  }
+  p {
+    text-align: center;
+  }
+  label {
+    font-weight: normal;
+  }
+}
+
+.vertical {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.form-control {
+  background: rgba(255, 255, 255, .8);
+  border-radius: 0;
+  height: 50px;
+}
+
+.btn {
+  background: $red;
+  color: $white;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+}
