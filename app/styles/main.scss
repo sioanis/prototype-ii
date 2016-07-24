@@ -18,8 +18,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  height: 100vh;
+}
+
 header {
-  // background: $red-opacity;
   color: $white;
   text-align: center;
   h1 {
@@ -27,24 +30,51 @@ header {
   }
 }
 
+a, a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .login {
   background: img('home.jpg') center no-repeat;
   background-size: cover;
-  height: 100vh;
   color: $white;
   a {
-    color: $white;
     font-weight: bold;
-  }
-  .opacity {
-    background: rgba(0,0,0,.1);
-    height: 100vh;
   }
   p {
     text-align: center;
   }
   label {
     font-weight: normal;
+  }
+  .opacity {
+    background: rgba(0,0,0,.1);
+    height: 100vh;
+  }
+  .form-control {
+    background: rgba(255, 255, 255, .8);
+    border-radius: 0;
+    height: 50px;
+  }
+  .btn {
+    background: $red;
+    color: $white;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+.main {
+  background: img('main.jpg') center no-repeat;
+  background-size: cover;
+  header {
+    background: $red-opacity;
+  }
+  .copy {
+    background: rgba(79, 89, 89, .8);
+    color: $white;
   }
 }
 
@@ -54,18 +84,4 @@ header {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.form-control {
-  background: rgba(255, 255, 255, .8);
-  border-radius: 0;
-  height: 50px;
-}
-
-.btn {
-  background: $red;
-  color: $white;
-  border: 0;
-  border-radius: 0;
-  width: 100%;
 }
